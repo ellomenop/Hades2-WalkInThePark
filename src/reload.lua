@@ -13,7 +13,7 @@ end
 
 function get_next_room_on_walk()
 	if config.mode == Mode.FLASHCARD then
-		local room_data = get_room_data_for_name("H_Combat05")--get_room_data_for_name("H_Combat" .. string.format("%02d", math.random(1,15)))
+		local room_data = get_room_data_for_name("H_Combat" .. string.format("%02d", math.random(1,15)))
 		room_data.Flipped = (math.random() < 0.5)
 		return room_data
 	end
