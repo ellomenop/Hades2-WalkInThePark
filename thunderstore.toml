@@ -1,0 +1,43 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "ellomenop"
+name = "WalkInThePark"
+versionNumber = "0.0.1"
+description = "Stroll through each room with no enemies"
+websiteUrl = "https://github.com/ellomenop/Hades2-WalkInThePark"
+containsNsfwContent = false
+
+[package.dependencies]
+Hell2Modding-Hell2Modding = "1.0.26"
+SGG_Modding-ENVY = "1.0.0"
+SGG_Modding-Chalk = "2.0.2"
+SGG_Modding-ReLoad = "1.0.1"
+SGG_Modding-SJSON = "1.0.0"
+SGG_Modding-ModUtil = "3.1.0"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "./CHANGELOG.md"
+
+[[build.copy]]
+source = "./LICENSE"
+target = "./LICENSE"
+
+[[build.copy]]
+source = "./src"
+target = "./plugins"
+
+
+[publish]
+repository = "https://thunderstore.io"
+communities = [ "hades-ii", ]
+
+[publish.categories]
+hades-ii = [ "mods", "tools"]
